@@ -69,3 +69,17 @@ CMD [ "java", "HelloWorld.java" ]
 ```
 Now we are ready to build our image. If you are using VS Code you can either right click and select build image or use the terminal. I will show you how to build the image using the terminal in this tutorial.
 ### Build the image using the terminal
+Open the terminal using VS code, we type:
+```
+docker build -t hello_world:1.0 .
+```
+Note: 
+* **-t** is used to name our image, in this case is hello_world.
+* We can specify which version is it by following up with a **:** or we can leave it as it and it will default to "latest" tag.
+* the . is where we specify the path where the Dockerfile is located, since we are already in the directory where the Dockerfile is located, we can simply leave it as a dot.
+
+## Run our Docker image
+Finally, we can either go to the GUI for Docker to run the image there or we can run it using the terminal
+```terminal
+docker run hello_world
+```
